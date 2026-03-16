@@ -19,7 +19,7 @@ ClauseGuard operates on a four-pillar agentic pipeline, orchestrated to resolve 
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 *   **Frontend**: Streamlit (Modular UI, decoupled logic)
 *   **Backend**: FastAPI, Python
