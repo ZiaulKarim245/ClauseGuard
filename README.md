@@ -5,7 +5,7 @@ ClauseGuard is a LegalTech application that automates contract review and risk a
 What usually takes a senior partner hours of billable time is condensed into a 90-second automated risk dashboard.
 
 ![ClauseGuard Dashboard Demo](assets/Demo.png)
-![ClauseGuard Dashboard Demo](assets/Demo 2.png)
+![ClauseGuard Dashboard Demo](assets/Demo_2.png)
 
 ---
 
