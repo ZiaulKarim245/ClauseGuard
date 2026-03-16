@@ -1,6 +1,6 @@
-# ⚖️ ClauseGuard: AI Contract Risk Intelligence
+#  ClauseGuard: AI Contract Risk Intelligence
 
-ClauseGuard is an enterprise-grade LegalTech application that automates contract review and risk analysis. By utilizing a Mixture of Agents (MoA) architecture, it ingests complex legal documents (including messy, scanned PDFs), extracts dangerous clauses, verifies cited statutes against live government databases, and cross-references recent legal precedents.
+ClauseGuard is a LegalTech application that automates contract review and risk analysis. By utilizing a Mixture of Agents (MoA) architecture, it ingests complex legal documents (including messy, scanned PDFs), extracts dangerous clauses, verifies cited statutes against live government databases, and cross-references recent legal precedents.
 
 What usually takes a senior partner hours of billable time is condensed into a 90-second automated risk dashboard.
 
@@ -12,10 +12,10 @@ What usually takes a senior partner hours of billable time is condensed into a 9
 
 ClauseGuard operates on a four-pillar agentic pipeline, orchestrated to resolve conflicts and output a unified risk report:
 
-*   **👁️ Vision Agent (Llama 4 Vision)**: The digitizer. Runs OCR on faxed PDFs, handwritten amendments, and stamped signature pages to convert raw images into clean, searchable text.
-*   **📚 RAG Agent (Llama 3 + ChromaDB)**: The core pattern matcher. Scans the extracted text to identify high-risk clauses (uncapped liability, unilateral termination, perpetual data licenses) and applies exact inline page citations.
-*   **⚖️ Fact Checker (Gemini + Google Grounding)**: The compliance validator. Actively queries authoritative legal databases to ensure cited statutes and regulations (e.g., GDPR frameworks) are active and have not been superseded.
-*   **🌐 Research Agent (LangGraph + Tavily)**: The precedent hunter. Executes live web searches to find recent court decisions or FTC rulings that might impact the enforceability of the extracted clauses.
+*   ** Vision Agent (Llama 4 Vision)**: The digitizer. Runs OCR on faxed PDFs, handwritten amendments, and stamped signature pages to convert raw images into clean, searchable text.
+*   ** RAG Agent (Llama 3 + ChromaDB)**: The core pattern matcher. Scans the extracted text to identify high-risk clauses (uncapped liability, unilateral termination, perpetual data licenses) and applies exact inline page citations.
+*   ** Fact Checker (Gemini + Google Grounding)**: The compliance validator. Actively queries authoritative legal databases to ensure cited statutes and regulations (e.g., GDPR frameworks) are active and have not been superseded.
+*   ** Research Agent (LangGraph + Tavily)**: The precedent hunter. Executes live web searches to find recent court decisions or FTC rulings that might impact the enforceability of the extracted clauses.
 
 ---
 
@@ -30,7 +30,7 @@ ClauseGuard operates on a four-pillar agentic pipeline, orchestrated to resolve 
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 The repository enforces a strict separation of concerns, dividing the application into independent frontend and backend environments.
 
@@ -59,14 +59,14 @@ ClauseGuard/
 
 ---
 
-## 📋 Prerequisites
+##  Prerequisites
 * **Python 3.10+**
 * API Keys for **Google Gemini** and **Groq**
 * **Tavily** account for live legal research
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Clone the Repository
 
@@ -150,11 +150,11 @@ LANGCHAIN_PROJECT="clauseguard_legal_ai"
 
 ---
 
-## ⚠️ Disclaimer
+##  Disclaimer
 
 > [!CAUTION]
 > **Not Legal Advice**: ClauseGuard is an AI-powered research assistant designed to aid professionals. It does not constitute formal legal counsel. Always consult a qualified attorney before signing binding agreements.
 ---
 
-## 📄 License
+##  License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
