@@ -12,10 +12,10 @@ What usually takes a senior partner hours of billable time is condensed into a 9
 
 ClauseGuard operates on a four-pillar agentic pipeline, orchestrated to resolve conflicts and output a unified risk report:
 
-*   ** Vision Agent (Llama 4 Vision)**: The digitizer. Runs OCR on faxed PDFs, handwritten amendments, and stamped signature pages to convert raw images into clean, searchable text.
-*   ** RAG Agent (Llama 3 + ChromaDB)**: The core pattern matcher. Scans the extracted text to identify high-risk clauses (uncapped liability, unilateral termination, perpetual data licenses) and applies exact inline page citations.
-*   ** Fact Checker (Gemini + Google Grounding)**: The compliance validator. Actively queries authoritative legal databases to ensure cited statutes and regulations (e.g., GDPR frameworks) are active and have not been superseded.
-*   ** Research Agent (LangGraph + Tavily)**: The precedent hunter. Executes live web searches to find recent court decisions or FTC rulings that might impact the enforceability of the extracted clauses.
+*    Vision Agent (Llama 4 Vision): The digitizer. Runs OCR on faxed PDFs, handwritten amendments, and stamped signature pages to convert raw images into clean, searchable text.
+*    RAG Agent (Llama 3 + ChromaDB): The core pattern matcher. Scans the extracted text to identify high-risk clauses (uncapped liability, unilateral termination, perpetual data licenses) and applies exact inline page citations.
+*    Fact Checker (Gemini + Google Grounding): The compliance validator. Actively queries authoritative legal databases to ensure cited statutes and regulations (e.g., GDPR frameworks) are active and have not been superseded.
+*    Research Agent (LangGraph + Tavily): The precedent hunter. Executes live web searches to find recent court decisions or FTC rulings that might impact the enforceability of the extracted clauses.
 
 ---
 
