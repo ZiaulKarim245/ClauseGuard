@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Base Layout & Typography */
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* UI Cleanup: Removing Streamlit default chrome */
+#MainMenu { visibility: hidden; }
+footer { visibility: hidden; }
+header[data-testid="stHeader"] { background: transparent !important; border: none !important; }
+
+/* Sidebar Construction */
+[data-testid="stSidebar"] {
+    background-color: #f8f9fa !important;
+    border-right: 1px solid #e0e4e9 !important;
+}
+[data-testid="stSidebar"] [data-testid="stVerticalBlock"] {
+    padding-top: 2rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+[data-testid="stSidebar"] .stSelectbox label {
+    font-size: 0.75rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #5f6368 !important;
+    font-weight: 600;
+}
+[data-testid="stSidebar"] hr {
+    margin: 1.5rem 0;
+    border-color: #e0e4e9;
+}
+
+/* Core Page Structure */
+.stApp { background-color: #ffffff; }
+
+/* Dashboard Tab Navigation */
+div[data-testid="stTabs"] > div:first-child {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 999999 !important;
+    background-color: white !important;
+    padding-top: 0.5rem !important;
+    border-bottom: 1px solid #e0e4e9 !important;
+}
+[data-testid="stTabs"] [role="tablist"] {
+    border-bottom: none !important;
+    padding: 0 2rem !important;
+}
+[data-testid="stTabs"] button[role="tab"] {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #5f6368;
+    background: transparent;
+    border: none;
+    padding-bottom: 0.75rem;
+}
+[data-testid="stTabs"] button[role="tab"][aria-selected="true"] {
+    color: #1a73e8;
+    border-bottom: 2px solid #1a73e8;
+}
+
+/* Conversational Interface */
+[data-testid="stChatMessage"] {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 1.5rem 0 !important;
+    border-bottom: 1px solid #f1f3f4 !important;
+    border-radius: 0 !important;
+}
+[data-testid="stChatMessage"][data-testid*="user"] {
+    background-color: #f8f9fa !important;
+    border-radius: 12px !important;
+    padding: 1.5rem 1rem !important;
+    margin: 0.5rem 0;
+}
+
+/* Technical & Code Elements */
+code {
+    font-family: 'Inter', sans-serif !important;
+    background: #f8f9fa !important;
+    color: inherit !important; /* Keep natural text color */
+    padding: 2px 5px !important;
+    border-radius: 4px !important;
+    border: 1px solid #ebedef !important;
+    font-size: 0.95em !important;
+    font-weight: 400 !important;
+}
+
+/* Hide Streamlit Header Anchor Links */
+.stMarkdown h1 a, .stMarkdown h2 a, .stMarkdown h3 a, 
+.stMarkdown h4 a, .stMarkdown h5 a, .stMarkdown h6 a {
+    display: none !important;
+}
+
+/* Fix for mathematical/LaTeX text (KaTeX) */
+.katex {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1.05em !important;
+    color: inherit !important;
+}
+/* Ensure LaTeX font doesn't default to serif */
+.katex .katex-html {
+    font-family: 'Inter', sans-serif !important;
+}
+.katex .mathit, .katex .mathrm {
+    font-family: 'Inter', sans-serif !important;
+    font-style: normal !important;
+}
+
+/* Chat Input Terminal */
+[data-testid="stChatInput"] {
+    padding-bottom: 2rem !important;
+    background: transparent !important;
+}
+[data-testid="stChatInput"] > div {
+    border: 1px solid #dfe1e5 !important;
+    border-radius: 24px !important;
+    background: #ffffff !important;
+    box-shadow: 0 1px 6px rgba(32,33,36,0.1) !important;
+}
+[data-testid="stChatInput"] textarea {
+    background: transparent !important;
+    color: #3c4043 !important;
+    padding-top: 10px !important;
+}
+
+/* Interactive Controls */
+.stButton > button {
+    border-radius: 8px !important;
+    transition: all 0.2s ease;
+}
+.stButton > button[kind="primary"] {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    font-weight: 500;
+}
+.stButton > button[kind="primary"]:hover {
+    background-color: #185abc;
+}
+
+/* Citations & Metadata Branding */
+.cg-cite {
+    background: #e8f0fe;
+    color: #1967d2;
+    border-radius: 16px;
+    padding: 2px 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-left: 6px;
+    border: 1px solid #d2e3fc;
+}
+.cg-agent-header {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #70757a;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}

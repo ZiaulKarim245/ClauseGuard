@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+.DS_Store
+*.db
+*.sqlite3
+data/clauseguard_db/
+data/logs/
+data/temp/
+data/uploaded_files/
+.langchain/
