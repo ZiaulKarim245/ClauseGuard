@@ -6,8 +6,5 @@ venv/
 .DS_Store
 *.db
 *.sqlite3
-data/clauseguard_db/
-data/logs/
-data/temp/
-data/uploaded_files/
+data/
 .langchain/
