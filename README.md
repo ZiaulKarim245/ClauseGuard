@@ -14,7 +14,7 @@ What usually takes a senior partner hours of billable time is condensed into a 9
 ClauseGuard operates on a four-pillar agentic pipeline, orchestrated to resolve conflicts and output a unified risk report:
 
 *    Vision Agent (Llama 4 Vision): The digitizer. Runs OCR on faxed PDFs, handwritten amendments, and stamped signature pages to convert raw images into clean, searchable text.
-*    RAG Agent (Llama 3 + ChromaDB): The core pattern matcher. Scans the extracted text to identify high-risk clauses (uncapped liability, unilateral termination, perpetual data licenses) and applies exact inline page citations.
+*    RAG Agent (Llama 3.1 8B + ChromaDB): The core pattern matcher. Scans the extracted text to identify high-risk clauses (uncapped liability, unilateral termination, perpetual data licenses) and applies exact inline page citations.
 *    Fact Checker (Gemini + Google Grounding): The compliance validator. Actively queries authoritative legal databases to ensure cited statutes and regulations (e.g., GDPR frameworks) are active and have not been superseded.
 *    Research Agent (LangGraph + Tavily): The precedent hunter. Executes live web searches to find recent court decisions or FTC rulings that might impact the enforceability of the extracted clauses.
 
@@ -26,8 +26,9 @@ ClauseGuard operates on a four-pillar agentic pipeline, orchestrated to resolve 
 *   **Backend**: FastAPI, Python
 *   **Orchestration**: LangGraph, LangChain
 *   **Vector Database**: ChromaDB
-*   **Embeddings/Reranking**: Sentence-Transformers (Cross-Encoder)
-*   **LLMs**: Gemini 2.0 Flash, Llama 3, Llama 4 Vision
+*   **Embeddings**: `multi-qa-MiniLM-L6-cos-v1`
+*   **Reranking**: `ms-marco-MiniLM-L-6-v2` (Cross-Encoder)
+*   **LLMs**: Gemini 2.0 Flash, Llama 3.1 8B (Instant), Llama 4 Vision
 
 ---
 
@@ -72,7 +73,7 @@ ClauseGuard/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/clauseguard.git
+git clone https://github.com/ziaulkarim245/clauseguard.git
 cd clauseguard
 ```
 
@@ -135,17 +136,17 @@ Create a `.env` file in the `backend/` directory and add your API keys:
 
 ```env
 # Required for Fact Checker & Core Reasoning
-GOOGLE_API_KEY="your_gemini_key_here"
+GOOGLE_API_KEY="gemini_key_here"
 
 # Required for RAG & Vision Generation
-GROQ_API_KEY="your_groq_key_here"
+GROQ_API_KEY="groq_key_here"
 
 # Required for Legal Precedent Research
-TAVILY_API_KEY="your_tavily_key_here"
+TAVILY_API_KEY="tavily_key_here"
 
 # Optional: For LangSmith Observability
 LANGCHAIN_TRACING_V2="true"
-LANGCHAIN_API_KEY="your_langsmith_key_here"
+LANGCHAIN_API_KEY="langsmith_key_here"
 LANGCHAIN_PROJECT="clauseguard_legal_ai"
 ```
 
